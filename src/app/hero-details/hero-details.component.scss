@@ -1,0 +1,28 @@
+
+.example-header-image {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShutFHc4JAnnu5bxekBhIAmaOx14yJ8lVJCg&usqp=CAU');
+  background-size: cover;
+}
+.main-card{
+  width: 50%;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: linear-gradient(45deg, black, transparent);
+}
+.mat-card-content{
+  text-align: center;
+}
+.mat-card>.mat-card-actions:last-child {
+  text-align: center;
+}
+.mat-card-avatar{
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+.mat-card-header-text{
+  margin: 0px !important;
+}

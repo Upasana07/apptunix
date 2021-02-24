@@ -1,1 +1,14 @@
-<p>hero-details works!</p>
+<mat-card class="main-card">
+    <div mat-card-avatar class="example-header-image"></div>
+  <mat-card-content>
+    <mat-card-title class="mt-2">{{employeeDetails?.employee_name}}</mat-card-title>
+    <mat-card-subtitle>AGE: {{employeeDetails?.employee_age}}</mat-card-subtitle>
+    <p>
+      The employee was created at
+      {{employeeDetails?.createdAt | date}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-stroked-button class="back-btn" (click)=goBack()>Go Back</button>
+  </mat-card-actions>
+</mat-card>

@@ -7,18 +7,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeroDetailsComponent } from './hero-details/hero-details.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { HttpClientModule } from '@angular/common/http';
+import { HeroDetailsModule } from './hero-details/hero-details.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeroDetailsComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     DashboardModule,
-    HttpClientModule
+    HttpClientModule,
+    HeroDetailsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

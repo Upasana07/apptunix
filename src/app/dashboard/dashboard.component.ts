@@ -32,10 +32,9 @@ export class DashboardComponent implements AfterViewInit, OnInit {
 
   ngAfterViewInit() {
     this.listingService.getDetails().subscribe((res) => {
-      if (res.data) {
-        this.dataSource = new MatTableDataSource(res.data);
+      if (res.allEmployees) {
+        this.dataSource = new MatTableDataSource(res.allEmployees);
         setTimeout(() => {
-          debugger
           this.dataSource.paginator = this.paginator;
           this.dataSource.sort = this.sort;
         }, 200);

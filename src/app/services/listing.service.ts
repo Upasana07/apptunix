@@ -14,15 +14,15 @@ export class ListingService {
 
   updateUser(event) {
     this.employeeDetails.next(event);
+    localStorage.setItem('isPresent', 'true');
   }
-
   getDetails(): Observable<any> {
-    const href = 'http://dummy.restapiexample.com/api/v1/employees';
-    const requestUrl = `${href}`;
-
-    return this._httpClient.get<any>(requestUrl);
+    const href = 'http://www.appgrowthcompany.com:5069/api/v1/employee/getAll ';
+    return this._httpClient.get<any>(href);
   }
-  getEmployeeDetails() {
-    return [];
+  getEmployeeDetails(id) {
+    const href = 'http://www.appgrowthcompany.com:5069/api/v1/employee/get';
+    const requestUrl = `${href}/${id}`;
+    return this._httpClient.get<any>(requestUrl);
   }
 }
