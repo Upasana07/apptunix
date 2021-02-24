@@ -17,7 +17,7 @@ export class HeroDetailsComponent implements OnInit {
     this.listingService.employee.subscribe(value => {
       this.employeeId = value['id'];
     });
-    this.listingService.getEmployeeDetails(this.employeeId).subscribe(res => { console.log(res); this.employeeDetails = res.data });
+    this.listingService.getEmployeeDetails(this.employeeId).subscribe(res => { this.employeeDetails = res.data });
   }
   goBack(){
     this.router.navigate(['']);
